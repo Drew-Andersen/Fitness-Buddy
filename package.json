@@ -1,0 +1,30 @@
+{
+  "name": "personal-fitness-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "contributors": [
+    {
+      "name": "Jacob Robison",
+      "email": "contributor.email@email.com",
+      "url": "https://github.com/jacobmrobison23"
+    },
+    {
+      "name": "Alexandar Diaz",
+      "email": "contributor.email@email.com",
+      "url": "https://github.com/aadiaz10"
+    },
+    {
+      "name": "Drew Andersen",
+      "email": "andrewtandersen@gmail.com",
+      "url": "https://github.com/Drew-Andersen"
+    }
+],
+  "license": "MIT"
+}
