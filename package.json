@@ -1,14 +1,15 @@
 {
-  "name": "personal-fitness-tracker",
+  "name": "fitness-buddy",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Drew Andersen",
   "contributors": [
     {
       "name": "Jacob Robison",
@@ -19,11 +20,6 @@
       "name": "Alexandar Diaz",
       "email": "contributor.email@email.com",
       "url": "https://github.com/aadiaz10"
-    },
-    {
-      "name": "Drew Andersen",
-      "email": "andrewtandersen@gmail.com",
-      "url": "https://github.com/Drew-Andersen"
     }
 ],
   "license": "MIT"

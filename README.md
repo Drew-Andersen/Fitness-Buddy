@@ -1,1 +1,2 @@
-# Personal-Fitness-Tracker
+# Fitness Buddy
+
