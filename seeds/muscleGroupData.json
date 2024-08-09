@@ -13,6 +13,14 @@
     },
     {
         "name": "Arms",
-        "href_icon": "https://img.icons8.com/?size=100&id=1804&format=png&color=000000"
+        "href_icon": "https://img.icons8.com/?size=100&id=25785&format=png&color=000000"
+    },
+    {
+        "name": "Legs",
+        "href_icon": "https://img.icons8.com/?size=100&id=25786&format=png&color=000000"
+    },
+    {
+        "name": "Abs",
+        "href_icon": "https://img.icons8.com/?size=100&id=rC3RAf59Hwj9&format=png&color=000000"
     }
 ]
