@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-       {{!-- Tailwinds CSS stylesheet --}}
-    <script src="https://cdn.tailwindcss.com"></script>
-    {{!-- Custom CSS stylesheet --}}
-    <link rel="stylesheet" href="../../public/css/styles.css">
-    <title>SignUp</title>
-</head>
-<body>
-    <header class="navbar">
-        <nav>
-            {{#if loggedIn}}
-                <a class="text-white" href="/">Home</a>
-                <a class="text-white" href="/dashboard">Dashboard</a>
-                <a class="text-white" href="/logout">Logout</a>
-            {{else}}
-                <a class="text-white" href="/">Home</a>
-                <a class="text-white" href="/login">Login</a>
-            {{/if}}
-        </nav>
-    </header>
 
     <main>
         <form action="/signup" method="POST">
@@ -35,4 +12,3 @@
     
 
 </body>
-</html>
