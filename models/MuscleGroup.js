@@ -28,3 +28,5 @@ MuscleGroup.init(
         modelName: 'muscle_group'
     }
 )
+
+module.exports = MuscleGroup;
