@@ -7,22 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     {{!-- Custom CSS stylesheet --}}
     <link rel="stylesheet" href="../../public/css/styles.css">
-    <title>Document</title>
+    <title>Fitness Buddy</title>
 </head>
 <body>
     <header class="navbar">
         <nav>
             {{#if loggedIn}}
-                <a href="/">Home</a>
-                <a href="/dashboard">Dashboard</a>
-                <a href="/logout">Logout</a>
+                <a class="text-white" href="/">Home</a>
+                <a class="text-white" href="/dashboard">Dashboard</a>
+                <a class="text-white" href="/logout">Logout</a>
             {{else}}
-                <a href="/">Home</a>
-                <a href="/login">Login</a>
+                <a class="text-white" href="/">Home</a>
+                <a class="text-white" href="/login">Login</a>
+                <a class="text-white" href="/signup">Sign Up</a>
             {{/if}}
         </nav>
     </header>
-    <h1>Welcome to Fitness Buddy</h1>
+    <h1 class="text-white">Welcome to Fitness Buddy</h1>
 
     <main>
         {{{ body }}}
