@@ -1,48 +1,45 @@
-
-
-    <main>
-        {{!-- Login Form --}}
-        <div>
-            <h2>Login</h2>
+<main>
+    <section class="grid grid-cols-2 m-10">
+    {{!-- Login Form --}}
+        <div class="col-span-1 m-auto">
+            <h2 class="text-center">Login</h2>
             <form action="/login" method="POST" class="form login-form">
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email-login" required>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email-login" placeholder="mail@mail.com" class="text-center border rounded-md" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password-login" required>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password-login" placeholder="password" class="text-center border rounded-md" required>
                 </div>
-                <div class="form-group">
-                    <button type="submit">Login</button>
+                <div class="form-group text-center">
+                    <button type="submit" class="bg-yellow-400 hover:bg-yellow-600 font-bold py-2 px-4 rounded">Login</button>
                 </div>
             </form>
         </div>
 
         {{!-- Sign-up Form --}}
-        <div>
-            <h2>Sign-up</h2>
+        <div class="col-span-1 m-auto">
+            <h2 class="text-center">Sign-up</h2>
             <form action="/signup" class="form signup-form" method="POST">
                 <div class="form-group">
-                    <label class="text-white" for="name">Name</label>
-                    <input type="text" name="name" id="name-signup" required>
+                    <label {{!-- class="text-white"--}} for="name">Name: </label>
+                    <input type="text" name="name" id="name-signup" placeholder="Name" class="text-center border rounded-md" required>
                 </div>
                 <div class="form-group">
-                    <label class="text-white" for="email">Email</label>
-                    <input type="email" name="email" id="email-signup" required>
+                    <label {{!-- class="text-white"--}} for="email">Email: </label>
+                    <input type="email" name="email" id="email-signup" placeholder="mail@mail.com" class="text-center border rounded-md" required>
                 </div>
                 <div class="form-group">
-                    <label class="text-white" for="password">Password</label>
-                    <input type="password" name="password" id="password-signup" required>
+                    <label {{!-- class="text-white"--}} for="password">Password: </label>
+                    <input type="password" name="password" id="password-signup" placeholder="password" class="text-center border rounded-md" required>
                 </div>
-                <div class="form-group">
-                    <button type="submit">Sign Up</button>
+                <div class="form-group text-center">
+                    <button type="submit" class="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded">Sign Up</button>
                 </div>
-            </form>
+            </form> 
         </div>
-    </main>
+    </section>
+</main>
 
-    <script src='../public/js/login.js'></script>
-
-</body>
-</html>
+<script src='../public/js/login.js'></script>
