@@ -13,13 +13,13 @@ Exercise.belongsTo(MuscleGroup, {
 });
 
 MuscleGroup.hasMany(Exercise, {
-    foreignKey: 'muscgle_group_id',
+    foreignKey: 'muscle_group_id',
     onDelete: 'CASCADE'
 });
 
-Exercise.belongsTo(Workout, {
-    foreignKey: 'workout_id'
-});
+// Workout.hasMany(Exercise, {
+//     foreignKey: 'exercise_id'
+// })
 
 Workout.belongsTo(User, {
     foreignKey: 'user_id'

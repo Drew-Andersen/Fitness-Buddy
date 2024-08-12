@@ -5,12 +5,6 @@ class MuscleGroup extends Model{}
 
 MuscleGroup.init(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
-        },
         muscle_group_name: {
             type: DataTypes.STRING,
             allowNull: false

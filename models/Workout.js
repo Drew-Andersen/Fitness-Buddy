@@ -5,12 +5,6 @@ class Workout extends Model {}
 
 Workout.init(
     {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
-        },
         date_created: {
             type: DataTypes.DATE,
             allowNull: false,
@@ -24,7 +18,7 @@ Workout.init(
             }
         },
         exercise_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'exercise',
                 key: 'id'
