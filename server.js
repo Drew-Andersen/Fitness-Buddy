@@ -22,7 +22,7 @@ app.set('view engine', 'handlebars');
 
 // Configure session middleware
 const sess = {
-  secret: process.env.SESSION_SECRET,
+  secret: 'Super secret seret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
