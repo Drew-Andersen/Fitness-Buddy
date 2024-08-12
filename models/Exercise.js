@@ -23,7 +23,7 @@ Exercise.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'muscle_group',
-                key: id
+                key: 'id'
             }
         },
         workout_id: {
