@@ -9,7 +9,7 @@ const workoutData = require('./workoutData.json');
 const muscleGroupData = require('./muscleGroupData.json');
 
 const seedDatabase = async () => {
-    sequelize.sync({ force: true });
+    // sequelize.sync({ force: true });
 
     // To seed User
     const users = await User.bulkCreate(userData, {
@@ -32,6 +32,7 @@ const seedDatabase = async () => {
     }
 
     // Add workout seed here
+
 
     process.exit(0);
 }
