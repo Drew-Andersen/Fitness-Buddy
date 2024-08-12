@@ -1,0 +1,24 @@
+<div class="profile-container">
+    <h1>{{name}}'s Dashboard</h1>
+    <section id="goals-section" class="grid grid-cols-2">
+        <div id="goals">
+            <div id="current-weight" class="col-span-1">
+                <h2>Current Weight: </h2>
+                <input type="number" id="current" />
+            </div>
+            <div id="goal-weight" class="col-span-1">
+                <h2>Goal Weight: </h2>
+                <input type="number" id="goal">
+            </div>
+        </div>
+        <div id="progress">
+            <progress id="progress-bar" max="100" value={value}></progress>
+        </div>
+    </section>
+    <section id="workouts-section">
+        <div id="completed-workouts"></div>
+        <div id="upcoming-workouts"></div>
+    </section>
+</div>
+
+<script src="../public/js/dashboard.js"></script>
