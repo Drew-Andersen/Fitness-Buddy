@@ -21,4 +21,8 @@ Exercise.belongsTo(Workout, {
     foreignKey: 'workout_id'
 });
 
+Workout.belongsTo(User, {
+    foreignKey: 'user_id'
+})
+
 module.exports = { User, Exercise, MuscleGroup, Workout };
