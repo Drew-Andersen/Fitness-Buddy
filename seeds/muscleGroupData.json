@@ -1,26 +1,26 @@
 [
     {
-        "name": "Chest",
+        "muscle_group_name": "Chest",
         "href_icon": "https://img.icons8.com/?size=100&id=1798&format=png&color=000000"
     },
     {
-        "name": "Back",
+        "muscle_group_name": "Back",
         "href_icon": "https://img.icons8.com/?size=100&id=8197&format=png&color=000000"
     },
     {
-        "name": "Shoulders",
+        "muscle_group_name": "Shoulders",
         "href_icon": "https://img.icons8.com/?size=100&id=1804&format=png&color=000000"
     },
     {
-        "name": "Arms",
+        "muscle_group_name": "Arms",
         "href_icon": "https://img.icons8.com/?size=100&id=25785&format=png&color=000000"
     },
     {
-        "name": "Legs",
+        "muscle_group_name": "Legs",
         "href_icon": "https://img.icons8.com/?size=100&id=25786&format=png&color=000000"
     },
     {
-        "name": "Abs",
+        "muscle_group_name": "Abs",
         "href_icon": "https://img.icons8.com/?size=100&id=rC3RAf59Hwj9&format=png&color=000000"
     }
 ]
