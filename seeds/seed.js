@@ -31,8 +31,11 @@ const seedDatabase = async () => {
         })
     }
 
-    // Add workout seed here
-
+    // Add workout seed here -- May need to adjust
+    await Workout.bulkCreate({
+        individualHooks: true,
+        returning: true
+    })
 
     process.exit(0);
 }
