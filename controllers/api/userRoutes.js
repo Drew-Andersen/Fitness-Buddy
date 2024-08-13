@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const bcrypt = require('bcrypt');
+const withAuth = require('../../utils/auth');
 
 // GET all users info
 router.get('/', async (req, res) => {
@@ -45,18 +47,14 @@ router.post('/', async (req, res) => {
 // POST login route
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ 
-      where: {
-        email: req.body.email 
-      } 
-    });
+    const user = await User.findOne({ where: { email: req.body.email } });
 
-    if (!userData) {
+    if (!user) {
       res.status(400).json({ message: 'Incorrect email or password, please try again' });
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = await bcrypt.compare(req.body.password, req.body.password);
 
     if (!validPassword) {
       res.status(400).json({ message: 'Incorrect email or password, please try again' });
@@ -64,10 +62,10 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = user.id;
       req.session.logged_in = true;
 
-      res.json({ user: userData, message: 'You are now logged in!' });
+      res.json({ user: user, message: 'You are now logged in!' });
     });
   } catch (err) {
     res.status(400).json(err);
@@ -75,7 +73,7 @@ router.post('/login', async (req, res) => {
 });
 
 // POST logout route
-router.post('/logout', (req, res) => {
+router.post('/logout', withAuth, (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
