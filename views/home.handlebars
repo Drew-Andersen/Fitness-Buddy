@@ -1,6 +1,17 @@
 <div>
-    <p class="text-white text-center text-lg font-bold">Welcome to Fitness Buddy. Please login or create an account to use the app.</p>
-    <div>
-
+    <h2 class="text-white text-center text-lg font-bold">Welcome to Fitness Buddy!</h2>
+    <div class="grid grid-cols-3 gap-10 text-center">
+        {{#each muscle_groups}}
+        <div class="flex justify-center"> 
+            <div class="card border bg-gray-400 p-5 rounded-md">
+                <a href="/muscle_group/{{id}}">
+                    <div class="card-body">
+                        <h2 class="card-title">{{muscle_group_name}}</h2>
+                        <img class="card-img-top" src="{{href_icon}}" alt="{{muscle_group_name}}">
+                    </div>
+                </a>
+            </div>
+        </div>
+        {{/each}}
     </div>
 </div>
