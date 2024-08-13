@@ -1,13 +1,48 @@
 
 
     <main>
-        <form action="/login" method="POST">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
-            <button type="submit">Login</button>
-        </form>
+        {{!-- Login Form --}}
+        <div>
+            <h2>Login</h2>
+            <form action="/login" method="POST" class="form login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email-login" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password-login" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+
+        {{!-- Sign-up Form --}}
+        <div>
+            <h2>Sign-up</h2>
+            <form action="/signup" class="form signup-form" method="POST">
+                <div class="form-group">
+                    <label class="text-white" for="name">Name</label>
+                    <input type="text" name="name" id="name-signup" required>
+                </div>
+                <div class="form-group">
+                    <label class="text-white" for="email">Email</label>
+                    <input type="email" name="email" id="email-signup" required>
+                </div>
+                <div class="form-group">
+                    <label class="text-white" for="password">Password</label>
+                    <input type="password" name="password" id="password-signup" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
     </main>
+
+    <script src='../public/js/login.js'></script>
+
 </body>
 </html>
