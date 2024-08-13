@@ -1,41 +1,44 @@
 <main>
     <section class="grid grid-cols-2 m-10">
     {{!-- Login Form --}}
-        <div class="col-span-1 m-auto">
-            <h2 class="text-center">Login</h2>
-            <form action="/login" method="POST" class="form login-form">
+        <div class="col-span-1 m-auto border rounded-lg p-10 bg-gray-600">
+            <h2 class="font-bold text-xl text-white text-center pb-4">Login</h2>
+            <form method="POST" class="form login-form">
                 <div class="form-group">
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email-login" placeholder="mail@mail.com" class="text-center border rounded-md" required>
+                    {{!-- pr-8 makes the input field inline with the password input field --}}
+                    <label for="email" class="text-white pr-8">Email: </label>
+                    <input type="email" name="email" id="email-login" placeholder="mail@mail.com" class="text-center border rounded-md m-0.5" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password: </label>
-                    <input type="password" name="password" id="password-login" placeholder="password" class="text-center border rounded-md" required>
+                    <label for="password" class="text-white">Password: </label>
+                    <input type="password" name="password" id="password-login" placeholder="password" class="text-center border rounded-md m-0.5" required>
                 </div>
                 <div class="form-group text-center">
-                    <button type="submit" class="bg-yellow-400 hover:bg-yellow-600 font-bold py-2 px-4 rounded">Login</button>
+                    <button type="submit" class="text-white bg-yellow-600 hover:bg-yellow-400 font-bold py-2 px-4 rounded m-0.5">Login</button>
                 </div>
             </form>
         </div>
 
         {{!-- Sign-up Form --}}
-        <div class="col-span-1 m-auto">
-            <h2 class="text-center">Sign-up</h2>
-            <form action="/signup" class="form signup-form" method="POST">
+        <div class="col-span-1 m-auto border rounded-lg p-10 bg-gray-600">
+            <h2 class="font-bold text-xl text-center pb-4 text-white">Sign-up</h2>
+            <form class="form signup-form" method="POST">
                 <div class="form-group">
-                    <label {{!-- class="text-white"--}} for="name">Name: </label>
-                    <input type="text" name="name" id="name-signup" placeholder="Name" class="text-center border rounded-md" required>
+                    {{!-- pr-7 makes the input field inline with password input field --}}
+                    <label for="name" class="pr-7 text-white">Name: </label>
+                    <input type="text" name="name" id="name-signup" placeholder="Name" class="text-center border rounded-md m-0.5" required>
                 </div>
                 <div class="form-group">
-                    <label {{!-- class="text-white"--}} for="email">Email: </label>
-                    <input type="email" name="email" id="email-signup" placeholder="mail@mail.com" class="text-center border rounded-md" required>
+                    {{!-- pr-8 makes the input field inline with password input field --}}
+                    <label for="email" class="pr-8 text-white">Email: </label>
+                    <input type="email" name="email" id="email-signup" placeholder="mail@mail.com" class="text-center border rounded-md m-0.5" required>
                 </div>
                 <div class="form-group">
-                    <label {{!-- class="text-white"--}} for="password">Password: </label>
-                    <input type="password" name="password" id="password-signup" placeholder="password" class="text-center border rounded-md" required>
+                    <label class="text-white" for="password">Password: </label>
+                    <input type="password" name="password" id="password-signup" placeholder="password" class="text-center border rounded-md m-0.5" required>
                 </div>
                 <div class="form-group text-center">
-                    <button type="submit" class="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded">Sign Up</button>
+                    <button type="submit" class="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded m-0.5">Sign Up</button>
                 </div>
             </form> 
         </div>
