@@ -1,22 +1,21 @@
 const router = require('express').Router();
-const { Workout, User } = require('../models');
+const { Workout, User, MuscleGroup, Exercise } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET the homepage
 router.get('/', async (req, res) => {
   try {
     // Fetch some data to display on the homepage, if necessary
-    const workoutData = await Workout.findAll({
-      attributes: ['id', 'name', 'description'],
-      include: [{ model: User, attributes: ['username'] }],
+    const muscleGroupData = await MuscleGroup.findAll({
+      include: [{ model: Exercise }]
     });
 
     // Serialize the data so the template can read it
-    const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+    const muscle_groups = muscleGroupData.map((muscle_group) => muscle_group.get({ plain: true }));
 
     // Render the homepage template, passing in the data
-    res.render('homepage', {
-      workouts,
+    res.render('home', {
+      muscle_groups,
       logged_in: req.session.logged_in
     });
   } catch (err) {
