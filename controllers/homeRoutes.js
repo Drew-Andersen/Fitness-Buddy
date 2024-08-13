@@ -26,6 +26,8 @@ router.get('/', async (req, res) => {
 // GET the login page
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect them to the homepage
+  console.log('*************************************');
+  console.log(req.session);
   if (req.session.logged_in) {
     res.redirect('/dashboard');
     return;
@@ -39,9 +41,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
           attributes: { exclude: ['password'] },
-          include: [{ model: Exercise }],
+          // include: [{ model: Exercise }],
       });
-
+      console.log(userData);
       const user = userData.get({ plain: true });
 
       res.render('dashboard', {
@@ -49,7 +51,8 @@ router.get('/dashboard', withAuth, async (req, res) => {
           logged_in: true
       });
   } catch (err) {
-      res.status(500).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 

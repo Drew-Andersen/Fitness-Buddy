@@ -40,6 +40,7 @@ router.post('/', async (req, res) => {
       res.status(201).json(newUser);
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -50,14 +51,14 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ where: { email: req.body.email } });
 
     if (!user) {
-      res.status(400).json({ message: 'Incorrect email or password, please try again' });
+      res.status(400).json({ message: 'Incorrect email, please try again' });
       return;
     }
-
-    const validPassword = await bcrypt.compare(req.body.password, req.body.password);
+    console.log(req.body);
+    const validPassword = await user.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect email or password, please try again' });
+      res.status(400).json({ message: 'Incorrect password, please try again' });
       return;
     }
 
