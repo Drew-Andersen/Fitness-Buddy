@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="../../public/css/styles.css">
     <title>Fitness Buddy</title>
 </head>
-<body>
+<body class="bg-dark">
     <header class="navbar">
-        <h1 class="text-white">Fitness Buddy</h1>
-        <nav>
-            {{#if loggedIn}}
-                <a class="text-white" href="/">Home</a>
-                <a class="text-white" href="/dashboard">Dashboard</a>
-                <a class="text-white" href="/logout">Logout</a>
-            {{else}}
-                <a class="text-white" href="/">Home</a>
-                <a class="text-white" href="/login">Login</a>
-                <a class="text-white" href="/signup">Sign Up</a>
-            {{/if}}
+        <h1 {{!-- class="text-white"--}} class="font-bold text-2xl text-center">Fitness Buddy</h1>
+        <nav class="flex items-center">
+            <div class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                {{#if loggedIn}}
+                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/">Home</a>
+                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/dashboard">Dashboard</a>
+                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/logout">Logout</a>
+                {{else}}
+                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/">Home</a>
+                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/login">Login</a>
+                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/signup">Sign Up</a>
+                {{/if}}
+            </div>
         </nav>
     </header>
 
@@ -29,6 +31,7 @@
         {{{ body }}}
     </main>
     
+    <footer class="text-center">Created by All Pain No Gain</footer>
     {{!-- Link the JS file --}}
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src=""></script>
