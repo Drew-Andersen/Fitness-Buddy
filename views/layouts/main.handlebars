@@ -15,13 +15,13 @@
         <nav class="flex items-center">
             <div class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                 {{#if loggedIn}}
-                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/">Home</a>
-                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/dashboard">Dashboard</a>
-                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/logout">Logout</a>
+                    <a {{!-- class="text-white"--}} class="text-white hover:-translate-y-1 hover:text-lg duration-300" href="/">Home</a>
+                    <a {{!-- class="text-white"--}} class="text-white hover:-translate-y-1 hover:text-lg duration-300" href="/dashboard">Dashboard</a>
+                    <a {{!-- class="text-white"--}} class="text-white hover:-translate-y-1 hover:text-lg duration-300" href="/logout">Logout</a>
                 {{else}}
-                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/">Home</a>
-                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/login">Login</a>
-                    <a {{!-- class="text-white"--}} class="hover:-translate-y-1 hover:text-lg duration-300" href="/signup">Sign Up</a>
+                    <a {{!-- class="text-white"--}} class="text-white bg-blue-400 hover:bg-blue-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 text-white hover:-translate-y-1 hover:text-lg duration-300" href="/">Home</a>
+                    <a {{!-- class="text-white"--}} class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 text-white hover:-translate-y-1 hover:text-lg duration-300" href="/login">Login</a>
+             
                 {{/if}}
             </div>
         </nav>
