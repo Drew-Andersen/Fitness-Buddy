@@ -23,7 +23,12 @@ app.set('view engine', 'handlebars');
 // Configure session middleware
 const sess = {
   secret: 'super secret secret',
-  cookie: {},
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict'
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({

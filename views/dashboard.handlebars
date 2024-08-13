@@ -1,5 +1,5 @@
 <div class="profile-container">
-    <h1>{{name}}'s Dashboard</h1>
+    <h1>{{!--name}}'s--}} Dashboard</h1>
     <section id="goals-section" class="grid grid-cols-2">
         <div id="goals">
             <div id="current-weight" class="col-span-1">
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div id="progress">
-            <progress id="progress-bar" max="100" value={value}></progress>
+            <progress id="progress-bar" max="100" value='75'></progress>
         </div>
     </section>
     <section id="workouts-section">
