@@ -17,6 +17,8 @@ MuscleGroup.hasMany(Exercise, {
     onDelete: 'CASCADE'
 });
 
+
+
 // Workout.hasMany(Exercise, {
 //     foreignKey: 'exercise_id'
 // })
