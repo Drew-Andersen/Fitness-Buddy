@@ -1,16 +1,16 @@
 const newFormHandler = async (e) => {
     e.preventDefault();
 
-    const name = document.querySelector('#name').value.trim();
-    const desc = document.querySelector('#desc').value.trim();
+    const name = document.querySelector('#form-name').value.trim();
+    const description = document.querySelector('#form-desc').value.trim();
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
 
-    if (name && desc) {
+    if (name && description) {
         const response = await fetch(`/api/exercises/${id}`, {
             method: 'POST',
-            body: JSON.stringify({ name, desc }),
+            body: JSON.stringify({ name, description }),
             headers: {
                 'Content Type': 'application/json'
             }
@@ -23,3 +23,7 @@ const newFormHandler = async (e) => {
         }
     }
 }
+
+document
+    .querySelector('.exercise-add-form')
+    .addEventListener('submit', newFormHandler);
