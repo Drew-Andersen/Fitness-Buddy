@@ -3,11 +3,11 @@
 {{#each exercises}}
   <div class="card border text-white bg-gray-500 p-4 m-1 rounded-md">
     <div class="card-header">
-      <h2 class="text-center">{{name}}</h2>
+      <h2 class="text-center text-lg"><strong>{{name}}</strong></h2>
     </div>
     <div class="card-body">
-      <p>{{description}}</p>
-      <p>Created by:{{../name}} </p>
+      <p class="text-center"><strong class="text-lg">Description: </strong>{{description}}</p>
+      {{!-- <p>Created by:{{../name}} </p> --}}
     </div>
   </div>
 {{/each}}
