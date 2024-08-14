@@ -1,15 +1,15 @@
 <div class="profile-container">
     <h1 class="text-white text-center text-lg">{{name}}'s Dashboard</h1>
-    <section id="goals-section" class="text-center">
+    <section id="goals-section" class="text-center mb-5">
         <div id="goals" class="grid grid-cols-2 my-6">
             <div id="current-weight" class="col-span-1">
                 <label class="text-white">Current Weight: </label>
-                <input type="number" id="input-current-weight" class="rounded-md" />
+                <input type="number" id="input-current-weight" class="rounded-md text-center" placeholder="200" />
                 <div id="current-div"></div>
             </div>
             <div id="goal-weight" class="col-span-1">
                 <label class="text-white">Goal Weight: </label>
-                <input type="number" id="input-goal-weight" class="rounded-md" />
+                <input type="number" id="input-goal-weight" class="rounded-md text-center" placeholder="205" />
                 <div id="goal-div"></div>
             </div>
         </div>
@@ -19,10 +19,44 @@
             </div>
         </div>
     </section>
-    <section id="workouts-section">
-        <div id="completed-workouts"></div>
-        <div id="upcoming-workouts"></div>
+    {{#if workout.length}}
+    <section id="workouts-section" class="grid grid-cols-2">
+        <div id="completed-workouts" class="col-span-1">
+            <h3 class="text-white text-center">Completed Workouts</h3>
+            {{#each workout}}
+            <div class="justify-center">
+                <div class="card border bg-gray-400 p-5 rounded-md">
+                    <a href="/workout/{{id}}">
+                        <div class="card-body">
+                            <h2 class="card-title">{{format_date date_created}}</h2>
+                            <p>Exercises</p> {{!-- Can delete --}}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div id="upcoming-workouts" class="col-span-1">
+            <h3 class="text-white text-center">Upcoming Workouts</h3>
+            {{#each workout}}
+            <div class="justify-center">
+                <div class="card border bg-gray-400 p-5 rounded-md">
+                    <a href="/workout/{{id}}">
+                        <div class="card-body">
+                            <h2 class="card-title">{{date_created}}</h2>
+                            <p>Exercises</p> {{!-- Can delete --}}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
     </section>
+    {{else}}
+    <div class="border border-white rounded-lg bg-gray-500 m-5">
+        <p class="text-center text-lg p-3">No workouts recorded</p>
+    </div>
+    {{/if}}
 </div>
 
 <script src="/js/dashboard.js"></script>
