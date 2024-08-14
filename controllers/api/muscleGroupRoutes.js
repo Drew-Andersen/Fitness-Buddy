@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { MuscleGroup, Exercise } = require('../../models');
-const { increment } = require('../../models/User');
 
 // /api/muscle_group
 router.get('/', async (req, res) => {
