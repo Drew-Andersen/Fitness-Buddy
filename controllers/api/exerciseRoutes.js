@@ -81,4 +81,18 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+router.post('/:id', async (req,res) => {
+  try {
+    const newExercise = await Exercise.create({
+      ...req.body,
+      muscle_group_id: req.params.id,
+    })
+
+    res.status(200).json(newExercise);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
+
 module.exports = router;
