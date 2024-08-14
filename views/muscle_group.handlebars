@@ -1,3 +1,5 @@
+{{log this}}
+
 {{#each exercises}}
   <div class="card border text-white bg-gray-500 p-4 m-1 rounded-md">
     <div class="card-header">
@@ -18,7 +20,7 @@
           <h5 class="card-title">Add New Exercise</h5>
         </div>
         <div class="card-body">
-          <form class="exercise-add-form">
+          <form id="exercise-add-form">
             <div class="form-group center-label">
               <label for="workout-name">Name:</label>
               <input type="text" class="form-control text-center border rounded-md m-0.5 text-black" id="form-name" name="name" required>

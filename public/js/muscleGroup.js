@@ -12,7 +12,7 @@ const newFormHandler = async (e) => {
             method: 'POST',
             body: JSON.stringify({ name, description }),
             headers: {
-                'Content Type': 'application/json'
+                'Content-Type': 'application/json',
             }
         });
 
@@ -25,5 +25,5 @@ const newFormHandler = async (e) => {
 }
 
 document
-    .querySelector('.exercise-add-form')
+    .querySelector('#exercise-add-form')
     .addEventListener('submit', newFormHandler);

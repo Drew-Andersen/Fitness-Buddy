@@ -19,7 +19,7 @@ Exercise.init(
                 model: 'muscle_group',
                 key: 'id'
             }
-        }
+        },
     },
     {
         sequelize,

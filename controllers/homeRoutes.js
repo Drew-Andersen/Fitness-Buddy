@@ -38,22 +38,55 @@ router.get('/login', (req, res) => {
 
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-      // Find the logged in user based on the session ID
-      const userData = await User.findByPk(req.session.user_id, {
-          attributes: { exclude: ['password'] },
-          // include: [{ model: Exercise }],
-      });
-      console.log(userData);
-      const user = userData.get({ plain: true });
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      // include: [{ model: Exercise }],
+    });
+    console.log(userData);
+    const user = userData.get({ plain: true });
 
-      res.render('dashboard', {
-          ...user,
-          logged_in: true
-      });
+    res.render('dashboard', {
+      ...user,
+      logged_in: true
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+router.get('/muscle_group/:id', withAuth, async (req, res) => {
+  try {
+    const exerciseData = await MuscleGroup.findByPk(req.params.id, {
+      include: [{ model: Exercise}]
+    })
+    const exercise = exerciseData.get({ plain: true })
+
+    res.render('muscle_group', {
+      ...exercise,
+      logged_in: req.session.logged_in
+    })
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
+
+router.get('/exercise/:id', async (req,res) => {
+  try {
+    const exerciseData = await Exercise.findByPk(req.params.id, {
+
+    })
+    const workout = exerciseData.get({ plain: true })
+
+    res.render('exercise', {
+      ...exercise
+    })
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
 
 module.exports = router;
