@@ -32,7 +32,7 @@ const seedDatabase = async () => {
     }
 
     // Add workout seed here -- May need to adjust
-    await Workout.bulkCreate({
+    await Workout.bulkCreate(workoutData, {
         individualHooks: true,
         returning: true
     })
