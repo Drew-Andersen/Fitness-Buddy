@@ -1,19 +1,19 @@
 <div class="profile-container">
-    <h1 class="text-white text-center text-lg">{{name}}'s Dashboard</h1>
+    <h1 class="font-bold text-white text-center text-lg">{{name}}'s Dashboard</h1>
     <section id="goals-section" class="text-center mb-5">
         <div id="goals" class="grid grid-cols-2 my-6">
             <div id="current-weight" class="col-span-1">
-                <label class="text-white">Current Weight: </label>
+                <label class="text-white font-bold">Current Weight: </label>
                 <input type="number" id="input-current-weight" class="rounded-md text-center" placeholder="200" />
                 <div id="current-div"></div>
             </div>
             <div id="goal-weight" class="col-span-1">
-                <label class="text-white">Goal Weight: </label>
+                <label class="text-white font-bold">Goal Weight: </label>
                 <input type="number" id="input-goal-weight" class="rounded-md text-center" placeholder="205" />
                 <div id="goal-div"></div>
             </div>
         </div>
-        <div id="progress" class="text-white">85%
+        <div id="progress" class="text-white font-bold">85%
             <div class="w-full h-6 bg-gray-200 rounded-full text-white">
                 <div class="h-6 bg-green-600 rounded-full dark:bg-green-700 border border-white" style="width: 85%"></div>
             </div>
@@ -22,7 +22,7 @@
     {{#if workout.length}}
     <section id="workouts-section" class="grid grid-cols-2">
         <div id="completed-workouts" class="col-span-1">
-            <h3 class="text-white text-center">Completed Workouts</h3>
+            <h3 class="text-white text-center font-bold">Completed Workouts</h3>
             {{#each workout}}
             <div class="justify-center">
                 <div class="card border bg-gray-400 p-5 rounded-md">
@@ -37,7 +37,7 @@
             {{/each}}
         </div>
         <div id="upcoming-workouts" class="col-span-1">
-            <h3 class="text-white text-center">Upcoming Workouts</h3>
+            <h3 class="text-white text-center font-bold">Upcoming Workouts</h3>
             {{#each workout}}
             <div class="justify-center">
                 <div class="card border bg-gray-400 p-5 rounded-md">
@@ -54,7 +54,7 @@
     </section>
     {{else}}
     <div class="border border-white rounded-lg bg-gray-500 m-5">
-        <p class="text-center text-lg p-3">No workouts recorded</p>
+        <p class="text-center text-lg p-3 font-semibold">No workouts recorded</p>
     </div>
     {{/if}}
 </div>
