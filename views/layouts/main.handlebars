@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{!-- Tailwinds CSS stylesheet --}}
     <script src="https://cdn.tailwindcss.com"></script>
+    {{!-- intro.js --}}
+    <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
     {{!-- Custom CSS stylesheet --}}
     <link rel="stylesheet" href="../../public/css/styles.css">
     <title>Fitness Buddy</title>
 </head>
-<body class="bg-slate-700">
+<body class="bg-slate-700 mx-6">
     <header class="navbar">
-        <h1 {{!-- class="text-white"--}} class="font-bold text-4xl text-center text-white">Fitness Buddy</h1>
+        <h1 {{!-- class="text-white"--}} class="font-bold text-4xl text-center text-white py-6">Fitness Buddy</h1>
         <nav class="flex items-center">
-            <div class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+            <div class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm py-2">
                 {{#if logged_in}}
-                    <a {{!-- class="text-white"--}} class="text-white hover:-translate-y-1 hover:text-lg duration-300" href="/">Home</a>
-                    <a {{!-- class="text-white"--}} class="text-white hover:-translate-y-1 hover:text-lg duration-300" href="/dashboard">Dashboard</a>
-                    <button {{!-- class="text-white"--}} id="logout" class="text-white hover:-translate-y-1 hover:text-lg duration-300">Logout</button>
+                    <a {{!-- class="text-white"--}} class="text-white bg-blue-400 hover:bg-blue-500 font-bold rounded-md text-sm px-5 py-2.5 me-2 text-white" href="/">Home</a>
+                    <a {{!-- class="text-white"--}} class="text-white bg-yellow-600 hover:bg-yellow-700 font-bold rounded-md text-sm px-5 py-2.5 me-2 text-white" href="/dashboard">Dashboard</a>
+                    <button {{!-- class="text-white"--}} id="logout" class="text-white bg-red-500 hover:bg-red-600 font-bold rounded-md text-sm px-5 py-2.5 me-2 text-white">Logout</button>
                 {{else}}
                     <a {{!-- class="text-white"--}} class="text-white bg-blue-400 hover:bg-blue-500 font-bold rounded-lg text-sm px-5 py-2.5 me-2 text-white hover:-translate-y-1 hover:text-lg duration-300" href="/">Home</a>
                     <a {{!-- class="text-white"--}} class="text-white bg-green-700 hover:bg-green-800 font-bold rounded-lg text-sm px-5 py-2.5 me-2 text-white hover:-translate-y-1 hover:text-lg duration-300" href="/login">Login</a>
@@ -32,7 +34,14 @@
     </main>
     
     <footer class="text-center text-white font-thin">Created by All Pain No Gain</footer>
+
     {{!-- Link the JS file --}}
+    {{!-- intro.js --}}
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    <script>
+        introJs().start();
+    </script>
+    {{!-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/js/logout.js"></script>
 </body>
