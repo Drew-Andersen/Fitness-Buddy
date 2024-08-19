@@ -1,10 +1,9 @@
 # Fitness Buddy
 
-## Video link 
-<!-- Add a video link of the deployed website here -->
-
 ## Images
-<!-- Add images here -->
+![User Dashboard](<./public/images/Fitness Buddy 1.png>)
+![User Hompage](<./public/images/Fitness Buddy 2.png>)
+![Add Exercise Page](<./public/images/Fitness Buddy 3.png>)
 
 ## Table of Contents
 - [Description](#description)
@@ -38,10 +37,10 @@ git clone https://github.com/drew-andersen/fitness-buddy.git
 10. From there, you can utilize applications such as Insomnia to test the functionality of the routes within the program and make edits to both the front-end and back-end of the code base.
 
 ## Usage
-<!-- Add how to use the application -->
+This application lets users track upcoming workouts and completed workouts. Once a user is logged in or signed up they will be brought to their dashboard where they can see their upcoming workouts, completed workouts, and can see a progress bar of how far they have come according to their starting weight, current weight, and goal weight. Users can also go to the homepage where they will see several buttons with muscle groups. When the user clicks on one of the muscle groups, they will be brought to another page of exercises for that muscle group. Users can also add exercises to each muscle group or delete exercises.
 
 ## License
-![MIT License badge](<./images/MIT-badge.png>)
+![MIT License badge](<./public/images/MIT-badge.png>)
 
 ## Credits
 Drew Andersen
