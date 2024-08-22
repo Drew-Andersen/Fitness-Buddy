@@ -12,6 +12,10 @@ MuscleGroup.init(
         href_icon: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        alt_txt: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
